@@ -2,7 +2,7 @@
 
 - [x] Configuração inicial do spring
 - [x] Configuração do docker-compose kafka
-- [ ] rota web para producer
+- [x] rota web para producer
 - [ ] producer e consumer simples
 - [ ] producer e consumer json
 - [ ] teste *unitário e de integração
