@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProducerController {
 
-    private final KafkaTemplate<String, String> template;
+    private final KafkaTemplate<String, RequestMessage> template;
 
-    public ProducerController(KafkaTemplate<String, String> template) {
+    public ProducerController(KafkaTemplate<String, RequestMessage> template) {
         this.template = template;
     }
 
     @PostMapping(path = "/api/producer")
     public String message(@RequestBody RequestMessage requestMessage) {
-        template.send("topic_one", requestMessage.getKey(), requestMessage.getMessage());
+        template.send("topic_five", requestMessage.getKey(), requestMessage);
         return requestMessage.getMessage();
     }
 }

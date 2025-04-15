@@ -4,7 +4,7 @@
 - [x] Configuração do docker-compose kafka
 - [x] rota web para producer
 - [x] producer e consumer simples
-- [ ] producer e consumer json
+- [x] producer e consumer json
 - [ ] teste *unitário e de integração
 - [ ] Documentação com guia de uso
 - [ ] \+ cobertura de teste
