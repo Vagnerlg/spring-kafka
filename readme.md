@@ -10,3 +10,14 @@
 - [ ] \+ cobertura de teste
 - [ ] \+ configuração de kafka com autenticação
 - [ ] \+ topico com arvo
+- [ ] Config SonarQube
+
+
+## SonarQube
+````sh
+./mvnw clean verify sonar:sonar \
+  -Dsonar.projectKey=spring-kafka \
+  -Dsonar.projectName='Spring Kafka' \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.token=sqp_dba1086499f48b8fb03b824585fa8df322b2c28b
+````
