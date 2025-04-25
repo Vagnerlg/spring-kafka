@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 @Component
 @Log4j2
 public class Listenerkafka {
-
-    @KafkaListener(groupId = "spring", topics = "topic_five")
+    
+    @KafkaListener(groupId = "spring", topics = "${spring.kafka.topic}")
     public void listen(ConsumerRecord<String, RequestMessage> consumerRecord) {
         log.info("Consumer: {}", consumerRecord.value());
     }
