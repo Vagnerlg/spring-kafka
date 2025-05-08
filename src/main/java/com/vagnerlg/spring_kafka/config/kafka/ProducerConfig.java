@@ -16,8 +16,11 @@ import java.util.Map;
 @Configuration
 public class ProducerConfig {
 
-    @Value("${spring.kafka.bootstrap-servers}")
-    private String bootstrapServersConfig;
+    private final String bootstrapServersConfig;
+
+    public ProducerConfig(@Value("${spring.kafka.bootstrap-servers}") String bootstrapServersConfig) {
+        this.bootstrapServersConfig = bootstrapServersConfig;
+    }
 
     @Bean
     public ProducerFactory<String, RequestMessage> producerFactory() {

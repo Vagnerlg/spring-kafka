@@ -19,5 +19,8 @@
   -Dsonar.projectKey=spring-kafka \
   -Dsonar.projectName='Spring Kafka' \
   -Dsonar.host.url=http://localhost:9000 \
-  -Dsonar.token=sqp_dba1086499f48b8fb03b824585fa8df322b2c28b
+  -Dsonar.token=sqp_be05018d8e8179bd9a867611de3e3040fbb0730e
 ````
+
+testSonar123!
+sqp_be05018d8e8179bd9a867611de3e3040fbb0730e

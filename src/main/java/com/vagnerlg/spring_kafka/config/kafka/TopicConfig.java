@@ -14,11 +14,19 @@ import java.util.Map;
 @Configuration
 public class TopicConfig {
 
-    @Value("${spring.kafka.bootstrap-servers}")
-    private String bootstrapServersConfig;
+    private final String bootstrapServersConfig;
 
-    @Value("${spring.kafka.topic}")
-    private String topic;
+    private final String topic;
+
+    public TopicConfig(
+            @Value("${spring.kafka.bootstrap-servers}")
+            String bootstrapServersConfig,
+            @Value("${spring.kafka.topic}")
+            String topic
+    ) {
+        this.bootstrapServersConfig = bootstrapServersConfig;
+        this.topic = topic;
+    }
 
     @Bean
     public KafkaAdmin admin() {
