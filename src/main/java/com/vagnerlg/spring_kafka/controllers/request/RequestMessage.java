@@ -1,15 +1,8 @@
 package com.vagnerlg.spring_kafka.controllers.request;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class RequestMessage {
 
-    private String key;
+public record RequestMessage(@NonNull String key, @NonNull String message) {
 
-    private String message;
 }

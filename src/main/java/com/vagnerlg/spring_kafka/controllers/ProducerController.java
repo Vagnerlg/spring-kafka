@@ -22,7 +22,7 @@ public class ProducerController {
 
     @PostMapping(path = "/api/producer")
     public String message(@RequestBody RequestMessage requestMessage) {
-        template.send(topic, requestMessage.getKey(), requestMessage);
-        return requestMessage.getMessage();
+        template.send(topic, requestMessage.key(), requestMessage);
+        return requestMessage.message();
     }
 }
